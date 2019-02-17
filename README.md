@@ -1,17 +1,17 @@
 ###### Set up MongoDB Replication 
 
 1. Create database directory for each member in a replica set e.g.
-⋅⋅* /mongodb/replica/db1/
-⋅⋅* /mongodb/replica/db2/
-⋅⋅* /mongodb/replica/db3/
+  * /mongodb/replica/db1/
+  * /mongodb/replica/db2/
+  * /mongodb/replica/db3/
  
  > Minimum number of members in a replica set is 3.
 
  2. Start databases
 
- ⋅⋅* mongod --dbpath /mongodb/Replica/db1/ --replSet replica --port 27017 --fork --logpath /mongodb/Replica/db1/mongod.log
- ⋅⋅* mongod --dbpath /mongodb/Replica/db2/ --replSet replica --port 27018 --fork --logpath /mongodb/Replica/db2/mongod.log
- ⋅⋅* mongod --dbpath /mongodb/Replica/db3/ --replSet replica --port 27019 --fork --logpath /mongodb/Replica/db3/mongod.log
+   * mongod --dbpath /mongodb/Replica/db1/ --replSet replica --port 27017 --fork --logpath /mongodb/Replica/db1/mongod.log
+   * mongod --dbpath /mongodb/Replica/db2/ --replSet replica --port 27018 --fork --logpath /mongodb/Replica/db2/mongod.log
+   * mongod --dbpath /mongodb/Replica/db3/ --replSet replica --port 27019 --fork --logpath /mongodb/Replica/db3/mongod.log
 
 > Each database should be with a different port. Make sure mongod has permission to access the database directory.
 
